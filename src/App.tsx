@@ -12,6 +12,8 @@ import CounterContext from './CounterContext';
 // context的provider其实已经封装在了store里
 import CounterContextStore from './CounterContext/store';
 
+import CounterGlobalState, { CounterDashboard } from './CounterGlobalState';
+
 const App: FC = () => {
   return (
     <div className='App'>
@@ -26,6 +28,9 @@ const App: FC = () => {
       <CounterContextStore>
         <CounterContext />
       </CounterContextStore>
+      <br />
+      <CounterGlobalState />
+      <CounterDashboard />
     </div>
   );
 };
