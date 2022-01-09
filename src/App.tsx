@@ -1,4 +1,5 @@
 import React, { FC } from 'react';
+// 使用React-Redux和Redux-Toolkit都需要用到Provider组件
 import { Provider } from 'react-redux';
 
 import CounterRedux from './CounterRedux';
@@ -6,6 +7,10 @@ import counterReduxStore from './CounterRedux/store';
 
 import CounterReduxToolkit from './CounterReduxToolkit';
 import counterReduxToolkitStore from './CounterReduxToolkit/store';
+
+import CounterContext from './CounterContext';
+// context的provider其实已经封装在了store里
+import CounterContextStore from './CounterContext/store';
 
 const App: FC = () => {
   return (
@@ -17,6 +22,10 @@ const App: FC = () => {
       <Provider store={counterReduxToolkitStore}>
         <CounterReduxToolkit />
       </Provider>
+      <br />
+      <CounterContextStore>
+        <CounterContext />
+      </CounterContextStore>
     </div>
   );
 };
