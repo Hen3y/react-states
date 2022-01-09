@@ -30,7 +30,7 @@ const Counter: FC = () => {
 
   return (
     <div style={{ display: 'flex', flexFlow: 'column', alignItems: 'center' }}>
-      <h1>Redux Counter</h1>
+      <h1>React Redux Counter</h1>
       {isCounterShown && <p style={{ fontSize: '32px' }}>{counter}</p>}
       <div>
         <button onClick={incrementHandler}>Increment</button>
